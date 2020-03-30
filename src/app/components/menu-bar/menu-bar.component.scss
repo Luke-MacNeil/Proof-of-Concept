@@ -1,0 +1,26 @@
+ion-img {
+  height: 5em;
+  width: 5em;
+}
+
+#header-img {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#header-text {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#header-img ion-img {
+  height: 3em;
+  width: 3em;
+}
+
+ion-img {
+  height: 5em;
+  width: 5em;
+}

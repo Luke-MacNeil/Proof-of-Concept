@@ -1,0 +1,24 @@
+#home-page-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ion-img {
+    height: 10em;
+    width: 10em;
+}
+
+ion-list {
+    display: table;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+ion-item {
+    border: 3px solid black;
+}
+
+ion-item:not(:last-of-type) {
+    border-bottom: 0px;
+}

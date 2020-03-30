@@ -1,0 +1,38 @@
+div {
+    margin-top: 100px;
+}
+
+ion-button {
+    --background: lightgreen;
+    --color: black;
+    width: 50%;
+    margin: 0 auto;
+}
+
+form {
+    width: 75%;
+    margin: 0 auto;
+}
+
+.ion-activated {
+    background: lightgreen;
+    opacity: 0.3;
+}
+
+ion-row {
+    margin: 5% 0;
+}
+
+ion-col {
+    border: 1px solid black;
+    margin: 0 3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ion-radio {
+    height: 25px;
+    width: 25px;
+    border: 1px solid black;
+}

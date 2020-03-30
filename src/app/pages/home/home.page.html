@@ -1,0 +1,14 @@
+<ion-content>
+  <div id="home-page-logo">
+    <ion-img n-img src="../../../assets/icon/Krate_logo.png"></ion-img>
+  </div>
+  <!-- <app-menu-bar></app-menu-bar> -->
+  <!-- <gl-background-video
+    src="../../../assets/video/krate_background.mp4"
+  ></gl-background-video> -->
+  <ion-list lines="full">
+    <ion-item button *ngFor="let p of appPages; let i = index" (click)="selectedIndex = i" routerDirection="forward" [routerLink]="p.url">
+        {{p.title}}
+      </ion-item>
+  </ion-list>
+</ion-content>

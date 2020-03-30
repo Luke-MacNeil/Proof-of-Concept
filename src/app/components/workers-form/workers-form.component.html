@@ -1,0 +1,101 @@
+<div id="content">
+  <ion-button expand="full" (click)="swapList($event)">Compute</ion-button>
+  <form id="compute-form" (ngSubmit)="saveProject(this.computeDevice)">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-label>Device:</ion-label>
+        </ion-col>
+        <ion-col>
+            <ion-select [(ngModel)]="computeDevice.device" name="device">
+              <ion-select-option *ngFor="let device of computeDeviceOptions" [value]="device">{{device}}</ion-select-option>
+            </ion-select>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-label>Processor:</ion-label>
+        </ion-col>
+        <ion-col style="width: 0px">
+          <ion-radio-group [(ngModel)]="computeDevice.processor" name="processor">
+            <ion-list lines="none">
+              <ion-item *ngFor="let pro of computeProcessorOptions">
+                <ion-radio slot="end" [value]="pro"></ion-radio>
+                <ion-label>{{pro}}</ion-label>
+              </ion-item>
+            </ion-list>
+          </ion-radio-group>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-label>Capacity:</ion-label>
+        </ion-col>
+        <ion-col>
+          <ion-select [(ngModel)]="computeDevice.capacity" name="capacity">
+            <ion-select-option *ngFor="let cap of computeCapacityOptions" [value]="cap">{{cap}}</ion-select-option>
+          </ion-select>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-label># of Cores:</ion-label>
+        </ion-col>
+        <ion-col>
+          <ion-select [(ngModel)]="computeDevice.cores" name="cores">
+            <ion-select-option *ngFor="let cores of computeCoresOptions" [value]="cores">{{cores}}</ion-select-option>
+          </ion-select>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-button type="submit" expand="full" style="margin-bottom: 3%;">Save Form-1</ion-button>
+  </form>
+
+  <ion-button expand="full" (click)="swapList($event)">Storage</ion-button>
+  <form id="storage-form" #f="ngForm" (ngSubmit)="saveProject(f.value)">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-label>Device:</ion-label>
+        </ion-col>
+        <ion-col>
+          <ion-select [(ngModel)]="storageDevice.device" name="device">
+            <ion-select-option *ngFor="let device of storageDeviceOptions" [value]="device">{{device}}</ion-select-option>
+          </ion-select>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-label>Drive(s):</ion-label>
+        </ion-col>
+        <ion-col>
+          <ion-list lines="none">
+            <ion-item>
+              <ion-label>C:/</ion-label>
+              <ion-checkbox [(ngModel)]="storageDevice.cDrive" name="cDrive"></ion-checkbox>
+            </ion-item>
+            <ion-item>
+              <ion-label>D:/</ion-label>
+              <ion-checkbox [(ngModel)]="storageDevice.dDrive" name="dDrive"></ion-checkbox>
+            </ion-item>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-button type="submit" expand="full" style="margin-bottom: 3%;">Save Form-2</ion-button>
+  </form>
+
+  <ion-button expand="full" (click)="swapList($event)">Network</ion-button>
+
+  <form id="network-form">
+    <ion-item>
+        <ion-label>Name 3:</ion-label>
+        <ion-input type="text" name="name"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label>Description 3:</ion-label>
+        <ion-textarea name="description"></ion-textarea>
+    </ion-item>
+    <button ion-button type="submit" block>Save Form-3</button>
+  </form>
+</div>

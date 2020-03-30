@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "proof-of-concept-krate"
+  },
+  "targets": {
+    "proof-of-concept-krate": {
+      "hosting": {
+        "app": [
+          "proof-of-concept-krate"
+        ]
+      }
+    }
+  }
+}
